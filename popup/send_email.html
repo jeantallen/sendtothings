@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="send_email.css"/>
+    <script src="validate_form.js"></script>
+  </head>
+
+<body>
+  <div id="popup-content">
+    <h1>Send To Things</h1>
+    <p>Unofficial tool to send items to your Things 3 to-do list.</p>
+    <p>Powered by Mail To Things.</p>
+    <p>Don't include any special characters in your entry or it won't go through!</p>
+    <form method="get" id="myForm" novalidate>
+      <label for="title">Title</label>
+      <input type="text" id="Subject" name="Subject" placeholder="What should your to-do be called?" onkeyup="validate()">
+      <label for="note">Note</label>
+      <input type="text" id="HtmlBody" name="HtmlBody" placeholder="Add any details here...">
+      <label for="Dest">Mail To Things Email</label>
+      <input type="text" id="Dest" name="Dest" placeholder="Enter your Mail To Things address.">
+      <input type="submit" id="submit" name="submit" value="Submit">
+    </form>
+    <script src="send_email.js"></script>
+  </div>
+
+  <div id="error-content" class="hidden">
+    <p>Oops! Something has gone horribly, horribly wrong.</p>
+  </div>
+
+</body>
+
+</html>
